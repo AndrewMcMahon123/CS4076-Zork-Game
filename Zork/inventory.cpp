@@ -10,17 +10,18 @@ void inventory::addItem(item Item){
     }
 }
 
-/*int inventory::selectItem(item Item){
+int inventory::selectItem(item Item){
     int itemPos = 0;
     for(int i = 0; i < invent.size(); i++){
-        if(invent[i] == Item){
+        if(&invent.at(i) == &Item){
             itemPos = i;
+            cout << "Item Selected";
         }
     }
     return itemPos;
 }
 
 void inventory::dropItem(item Item){
-    int n = invent.selectItem(Item);
-    invent.erase(n);
-}*/
+    int n = selectItem(Item);
+    invent.erase(invent.begin()+n);
+}
