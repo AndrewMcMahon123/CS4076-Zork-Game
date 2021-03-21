@@ -6,6 +6,16 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QPixmap pix("C:/Users/Owner/OneDrive/Documents/Zork/images/blank_key.png");
+
+    ui ->ivn_1->setPixmap(pix);
+    ui->ivn_1->setScaledContents(true);
+
+    ui ->ivn_2->setPixmap(pix);
+    ui->ivn_2->setScaledContents(true);
+
+    ui ->ivn_3->setPixmap(pix);
+    ui->ivn_3->setScaledContents(true);
 }
 
 MainWindow::~MainWindow()
