@@ -14,7 +14,8 @@ private:
     int difficulty;
 public:
    zombie(string type, QString image, string question, int difficulty); //png for creation add image
-   string getType();
+  QString getImage();
+    string getType();
    void setQuestion(string question);
    string getQuestion();
    int getDifficulty();
