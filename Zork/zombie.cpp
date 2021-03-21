@@ -11,6 +11,10 @@ zombie::zombie(string type, QString image, string question, int difficulty) {
     difficulty = this->difficulty;
 }
 
+QString zombie::getImage(){
+    return image;
+}
+
 string zombie::getType() {
     return type;
 }
