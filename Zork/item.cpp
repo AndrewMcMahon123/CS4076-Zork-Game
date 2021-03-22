@@ -1,9 +1,13 @@
 #include "item.h"
 
-item::item(string inDescription)
+item::item(string description, QString image)
 {
-    description = inDescription;
+    this->description = description;
+    this->image = image;
 }
 string item::getDescription(){
     return description;
+}
+QString item::getImage(){
+    return image;
 }
