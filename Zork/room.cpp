@@ -18,21 +18,24 @@ string Room::getMap(){
     return mapImage;
 }
 
-/*void Room::setExits(Room *north, Room *east, Room *south, Room *west){
+void Room::setExits(Room *north, Room *east, Room *south, Room *west)
+{
     exits[NORTH] = north;
     exits[EAST] = east;
     exits[SOUTH] = south;
     exits[WEST] = west;
-}*/
+}
+
+
 
 //nextRoom method tbd
 
 void addItem(item *inItem){
-
+    itemsInRoom.push_back(*inItem);
 }
 
 void removeItemFromRoom(int location){
-
+    
 }
 
 /*void removeZombie(string zombieType){
