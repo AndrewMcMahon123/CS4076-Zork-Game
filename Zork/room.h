@@ -9,8 +9,8 @@ using namespace std;
 using std::vector;
 
 #define NORTH 0
-#define SOUTH 1
-#define EAST 2
+#define EAST 1
+#define SOUTH 2
 #define WEST 3
 
 class Room
@@ -20,8 +20,10 @@ private:
    string roomImage;
    string mapImage;
    string description;
-   map<string, Room*> exits;
-   string exitString();
+   //Room* exits[4]; 
+   //map<string, Room*> exits;
+   //string exitString();
+   //vector<item> itemsInRoom;
    //vectors with zombies + vector with items needed
 
 public:
@@ -31,10 +33,12 @@ public:
     void setDescription(string describe);
     string getMap();
     Room* nextRoom(string direction);
-    void addItem(Item *inItem);
+    void addItem(item *inItem);
     string displayItem();
     void removeItemFromRoom(int location);
     void removeZombie(string zombieType);
+    vector<Room*> exits;
+    
 };
 
 #endif // ROOM_H
