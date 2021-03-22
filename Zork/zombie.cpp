@@ -4,11 +4,12 @@
 #include <time.h>
 
 
-zombie::zombie(string type, QString image, string question, int difficulty) {
-    type = this->type;
-    image = this->image;
-    question = this->question;
-    difficulty = this->difficulty;
+zombie::zombie(string type, QString image, string question, item *key, int difficulty) {
+    this->type = type;
+    this->image = image;
+    this->question = question;
+    this->difficulty = difficulty;
+    this->key = key;
 }
 
 QString zombie::getImage(){
@@ -20,7 +21,7 @@ string zombie::getType() {
 }
 
 void zombie::setQuestion(string newQ){
-    question = newQ;
+    this->question = newQ;
 }
 
 string zombie::getQuestion(){
