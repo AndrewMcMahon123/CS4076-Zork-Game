@@ -15,7 +15,8 @@ private:
 public:
     gameplay();
     Room* getCurrentRoom();
-    QString move(int direction);
+    vector<Room*> getExits();
+    string move(char direction);
 };
 
 #endif // GAMEPLAY_H
